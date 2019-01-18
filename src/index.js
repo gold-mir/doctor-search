@@ -12,6 +12,12 @@ $(document).ready(async () => {
     let doctors = await searchDoctorsByCondition(condition);
     printDoctorNames(doctors);
   });
+
+  $("#search-doctors").click(async () => {
+    let query = $("#doctor-name-input").val();
+    let doctors = await searchDoctorsByName(query);
+    printDoctorNames(doctors);
+  });
 });
 
 async function setupConditionList(){
