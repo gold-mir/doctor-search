@@ -8,24 +8,36 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <div class="card card-body">
-            <div class="row">
-              <div class="col-sm-6">
-                <select id="condition-select">
+          <div class="card">
+            <div class="card-header">
+              <h3>Search Doctors</h3>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <select id="condition-select">
 
-                </select>
-                <button id="search-conditions">Find a Doctor</button>
-              </div>
-              <div class="col-sm-6">
-                <input type="text" placeholder="Doctor Name" id="doctor-name-input">
-                <button id="search-doctors">Search Doctors</button>
+                  </select>
+                  <button id="search-conditions">Find a Doctor</button>
+                </div>
+                <div class="col-sm-6">
+                  <input type="text" placeholder="Doctor Name" id="doctor-name-input">
+                  <button id="search-doctors">Search Doctors</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card card-body">
-            <p>No results yet.</p>
+          <div class="card">
+            <div class="card-header">
+              <h3>Results</h3>
+            </div>
+            <div class="card-body">
+              <div id="output">
+                <p>no results yet</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
