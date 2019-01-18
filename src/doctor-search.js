@@ -6,6 +6,18 @@ export async function searchDoctorsByName(name){
   return searchDoctorsByAttr("name", name);
 }
 
+export async function getConditionsList(){
+  let conditions = [];
+  let query = `https://api.betterdoctor.com/2016-03-01/conditions?user_key=${process.env.exports.apiKey}`;
+  let json = await (await fetch(query)).json();
+
+  for(let condition of json.data){
+    conditions.push(condition);
+  }
+
+  return conditions;
+}
+
 async function searchDoctorsByAttr(attr, value){
   let doctors = [];
   let query = `https://api.betterdoctor.com/2016-03-01/doctors?${attr}=${value}&location=wa-seattle&skip=0&limit=100&user_key=${process.env.exports.apiKey}`;
