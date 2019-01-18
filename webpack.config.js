@@ -22,7 +22,7 @@ module.exports = {
       inject: 'body'
     }),
     new CleanWebpackPlugin(['dist']),
-    new Dotenv();
+    new Dotenv()
   ],
   module: {
     rules: [
