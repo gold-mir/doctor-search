@@ -10,6 +10,8 @@ $(document).ready(async () => {
   $("#search-conditions").click(async () => {
     let condition = $("#condition-select").val();
     let doctors;
+    let out = $("#output");
+    out.text("Searching...");
     try {
       doctors = await searchDoctorsByCondition(condition);
       printDoctorNames(doctors);
@@ -21,6 +23,8 @@ $(document).ready(async () => {
   $("#search-doctors").click(async () => {
     let query = $("#doctor-name-input").val();
     let doctors;
+    let out = $("#output");
+    out.text("Searching...");
     try {
       doctors = await searchDoctorsByCondition(query);
       printDoctorNames(doctors);
