@@ -17,7 +17,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Template',
+      title: 'Doctor Search',
       template: './src/index.html',
       inject: 'body'
     }),

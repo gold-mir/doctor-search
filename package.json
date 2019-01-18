@@ -1,7 +1,7 @@
 {
-  "name": "Template",
+  "name": "DoctorSearch",
   "version": "1.0.0",
-  "description": "template NPM setup with karma/jasmine",
+  "description": "searches for doctors",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
